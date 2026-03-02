@@ -3,39 +3,40 @@
 import Link from 'next/link'
 import { useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Menu, X, ExternalLink } from 'lucide-react'
-import { FaGithub, FaDiscord, FaTwitter, FaRedditAlien } from 'react-icons/fa'
+import { Menu, X } from 'lucide-react'
 import Container from '@/components/layout/Container'
 import Logo from '@/components/ui/Logo'
 import LocaleSwitch from '@/components/ui/LocaleSwitch'
 import { NAV_ITEMS } from '@/data/navigation'
 import { useUiStore } from '@/store/uiStore'
 import { useT, useLocale } from '@/components/i18n/I18nProvider'
+import Image from 'next/image'
 
+// ИСПРАВЛЕНО: ключ Icon → icon (чтобы совпадало с использованием в JSX)
 const SOCIAL = [
   {
     id: 'github',
     href: 'https://github.com/serendale-demo',
-    Icon: FaGithub,
+    icon: '/SVG/mdi_github.svg',
     label: 'GitHub',
   },
   {
     id: 'discord',
     href: 'https://discord.gg/serendale-demo',
-    Icon: FaDiscord,
+    icon: '/SVG/mdi_discord.svg',
     label: 'Discord',
+  },
+    {
+    id: 'reddit',
+    href: 'https://reddit.com/r/serendale_demo',
+    icon: '/SVG/mdi_reddit.svg',
+    label: 'Reddit',
   },
   {
     id: 'twitter',
     href: 'https://twitter.com/serendale_demo',
-    Icon: FaTwitter,
+    icon: '/SVG/mdi_twitter.svg',
     label: 'Twitter',
-  },
-  {
-    id: 'reddit',
-    href: 'https://reddit.com/r/serendale_demo',
-    Icon: FaRedditAlien,
-    label: 'Reddit',
   },
 ]
 
@@ -79,21 +80,18 @@ export default function Header() {
           <div className="hidden items-center gap-3 md:flex">
             <LocaleSwitch />
             <div className="flex items-center gap-2">
-              {SOCIAL.map(({ id, href, Icon, label }) => {
-                const Cmp = Icon || ExternalLink
-                return (
-                  <a
-                    key={id}
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={label}
-                    className="rounded-full border border-white/10 bg-white/5 p-2 text-white/70 transition hover:bg-white/10 hover:text-white"
-                  >
-                    <Cmp size={16} />
-                  </a>
-                )
-              })}
+              {SOCIAL.map(({ id, href, icon, label }) => (
+                <a
+                  key={id}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  className="text-white/70 transition hover:text-white"
+                >
+                  <Image src={icon} alt={label} width={20} height={20} />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -120,21 +118,18 @@ export default function Header() {
                 <div className="flex items-center justify-between">
                   <LocaleSwitch />
                   <div className="flex items-center gap-2">
-                    {SOCIAL.map(({ id, href, Icon, label }) => {
-                      const Cmp = Icon || ExternalLink
-                      return (
-                        <a
-                          key={id}
-                          href={href}
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label={label}
-                          className="rounded-full border border-white/10 bg-white/5 p-2 text-white/70 transition hover:bg-white/10 hover:text-white"
-                        >
-                          <Cmp size={16} />
-                        </a>
-                      )
-                    })}
+                    {SOCIAL.map(({ id, href, icon, label }) => (
+                      <a
+                        key={id}
+                        href={href}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={label}
+                        className="text-white/70 transition hover:text-white"
+                      >
+                        <Image src={icon} alt={label} width={20} height={20} />
+                      </a>
+                    ))}
                   </div>
                 </div>
 
