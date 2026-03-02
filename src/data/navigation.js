@@ -4,6 +4,4 @@ export const NAV_ITEMS = [
   { id: 'solutions', key: 'nav.solutions' },
   { id: 'roadmap', key: 'nav.roadmap' },
   { id: 'whitepaper', key: 'nav.whitepaper' },
-  { id: 'advantages', key: 'nav.advantages' },
-  { id: 'testimonials', key: 'nav.testimonials' },
 ]

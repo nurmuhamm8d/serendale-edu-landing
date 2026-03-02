@@ -1,12 +1,33 @@
 import './globals.css'
 import { cookies, headers } from 'next/headers'
-import { Inter } from 'next/font/google'
 import Script from 'next/script'
+import localFont from 'next/font/local'
 import { SITE } from '@/lib/site'
 import Background from '@/components/layout/Background'
 
-const inter = Inter({
-  subsets: ['latin', 'cyrillic'],
+const montserrat = localFont({
+  src: [
+    {
+      path: '../../public/Fonts/Montserrat,Noto_Sans,Roboto,Space_Grotesk/Montserrat/Montserrat-VariableFont_wght.ttf',
+      style: 'normal',
+    },
+    {
+      path: '../../public/Fonts/Montserrat,Noto_Sans,Roboto,Space_Grotesk/Montserrat/Montserrat-Italic-VariableFont_wght.ttf',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const spaceGrotesk = localFont({
+  src: [
+    {
+      path: '../../public/Fonts/Montserrat,Noto_Sans,Roboto,Space_Grotesk/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-display',
   display: 'swap',
 })
 
@@ -31,7 +52,7 @@ export default async function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <body
-        className={`${inter.className} h-full text-white antialiased`}
+        className={`${montserrat.variable} ${spaceGrotesk.variable} h-full font-sans text-white antialiased`}
         suppressHydrationWarning
       >
         <Script

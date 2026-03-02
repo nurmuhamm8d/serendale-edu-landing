@@ -12,32 +12,11 @@ import { useUiStore } from '@/store/uiStore'
 import { useT, useLocale } from '@/components/i18n/I18nProvider'
 import Image from 'next/image'
 
-// ИСПРАВЛЕНО: ключ Icon → icon (чтобы совпадало с использованием в JSX)
 const SOCIAL = [
-  {
-    id: 'github',
-    href: 'https://github.com/serendale-demo',
-    icon: '/SVG/mdi_github.svg',
-    label: 'GitHub',
-  },
-  {
-    id: 'discord',
-    href: 'https://discord.gg/serendale-demo',
-    icon: '/SVG/mdi_discord.svg',
-    label: 'Discord',
-  },
-    {
-    id: 'reddit',
-    href: 'https://reddit.com/r/serendale_demo',
-    icon: '/SVG/mdi_reddit.svg',
-    label: 'Reddit',
-  },
-  {
-    id: 'twitter',
-    href: 'https://twitter.com/serendale_demo',
-    icon: '/SVG/mdi_twitter.svg',
-    label: 'Twitter',
-  },
+  { id: 'github', href: 'https://github.com/serendale-demo', icon: '/SVG/mdi_github.svg', label: 'GitHub' },
+  { id: 'discord', href: 'https://discord.gg/serendale-demo', icon: '/SVG/mdi_discord.svg', label: 'Discord' },
+  { id: 'reddit', href: 'https://reddit.com/r/serendale_demo', icon: '/SVG/mdi_reddit.svg', label: 'Reddit' },
+  { id: 'twitter', href: 'https://twitter.com/serendale_demo', icon: '/SVG/mdi_twitter.svg', label: 'Twitter' },
 ]
 
 export default function Header() {
@@ -58,7 +37,7 @@ export default function Header() {
   const onNavClick = () => closeMobileNav()
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
+    <header className="absolute inset-x-0 top-0 z-50 bg-transparent">
       <Container>
         <div className="flex items-center justify-between py-4">
           <Link href={`/${locale}`} className="flex items-center gap-2">
@@ -79,7 +58,7 @@ export default function Header() {
 
           <div className="hidden items-center gap-3 md:flex">
             <LocaleSwitch />
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
               {SOCIAL.map(({ id, href, icon, label }) => (
                 <a
                   key={id}
@@ -114,10 +93,10 @@ export default function Header() {
               transition={{ duration: 0.25, ease: 'easeOut' }}
               className="md:hidden"
             >
-              <div className="mb-4 rounded-3xl border border-white/10 bg-black/40 p-4">
+              <div className="mb-4 rounded-3xl border border-white/10 bg-black/40 p-4 backdrop-blur-xl">
                 <div className="flex items-center justify-between">
                   <LocaleSwitch />
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-4">
                     {SOCIAL.map(({ id, href, icon, label }) => (
                       <a
                         key={id}

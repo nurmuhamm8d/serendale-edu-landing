@@ -11,7 +11,7 @@ body {
 }
 
 .gradient-shimmer {
-  background: linear-gradient(90deg, #ec4899 0%, #a855f7 35%, #3b82f6 70%, #ec4899 100%);
+  background: linear-gradient(90deg, #ff3bff 0%, #ecbfbf 35%, #5c24ff 70%, #d94fd5 100%);
   background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;

@@ -1,53 +1,50 @@
 export const MESSAGES = {
   ru: {
     meta: {
-      title: 'Serendale — Масштабируемое AI-обучение',
-      description:
-        'Платформа обучения с AI-персонализацией: курсы, наставники, трекинг прогресса, измеримые результаты.',
+      title: 'Serendale — Лендинг',
+      description: 'Демонстрационная лендинг страница.',
     },
     nav: {
-      courses: 'Курсы',
-      services: 'Сервисы',
+      courses: 'Смарт-контракты',
+      services: 'Услуги',
       solutions: 'Решения',
       roadmap: 'Дорожная карта',
-      whitepaper: 'Методология',
+      whitepaper: 'Белая книга',
       advantages: 'Преимущества',
       testimonials: 'Отзывы',
     },
     hero: {
-      kicker: 'ЛУЧШАЯ ПЛАТФОРМА ОБУЧЕНИЯ',
-      titleTop: 'Serendale.',
-      titleBottom: 'Scalable.',
-      text: 'AI адаптирует траекторию обучения под цель и темп. Понятные метрики прогресса, быстрый старт, стабильная структура контента.',
+      titleTop: 'ЛУЧШИЙ САЙТ',
+      titleBottom: 'Масштабируемый.',
+      text: 'Наша технология обеспечивает быстрый блокчейн (120K TPS) и гарантированную безопасность данных на основе ИИ. Алгоритм консенсуса Proof of Stake позволяет достичь неограниченной скорости.',
       ctaPrimary: 'Начать',
-      ctaSecondary: 'Смотреть курсы',
+      ctaSecondary: 'Подробнее',
     },
     metrics: {
-      learners: 'Учащихся',
+      learners: 'Учеников',
       courses: 'Курсов',
-      satisfaction: 'Оценка',
-      avgTime: 'Время/день',
+      satisfaction: 'Рейтинг',
+      avgTime: 'В день',
     },
     sections: {
-      coursesTitle: 'Курсы, которые ведут к результату',
-      coursesText: 'Короткие модули, практика, квизы и итоговые проекты.',
-      servicesTitle: 'Сервисы для роста',
-      servicesText: 'Наставники, трекинг, рекомендации, совместная работа.',
+      coursesTitle: 'Курсы, которые приводят к результату',
+      coursesText: 'Короткие модули, практика, тесты и итоговые проекты.',
+      servicesTitle: 'Услуги для роста',
+      servicesText: 'Наставники, отслеживание прогресса, рекомендации, совместная работа.',
       solutionsTitle: 'AI-решения внутри платформы',
-      solutionsText: 'Подбор материалов, персональный план, помощь по задачам.',
-      roadmapTitle: 'Дорожная карта',
+      solutionsText: 'Подбор контента, персональный план, помощь в задачах.',
+      roadmapTitle: 'Дорожная карта продукта',
       roadmapText: 'Публичный план улучшений и новых направлений.',
       whitepaperTitle: 'Методология',
-      whitepaperText:
-        'Коротко: как мы строим программы, измеряем прогресс и улучшаем результат.',
+      whitepaperText: 'Кратко: как мы разрабатываем программы, измеряем прогресс и улучшаем результаты.',
     },
     advantages: {
       title: 'Преимущества',
-      text: 'Фокус на скорости обучения, понятности и воспроизводимом результате.',
+      text: 'Ориентация на скорость, ясность и воспроизводимые результаты.',
     },
     testimonials: {
       title: 'Отзывы',
-      text: 'Нейтральные тестовые отзывы (education), 6 карточек.',
+      text: 'Нейтральные демо-отзывы, 6 карточек.',
       schemaName: 'Serendale',
     },
     footer: {
@@ -66,26 +63,24 @@ export const MESSAGES = {
   },
   en: {
     meta: {
-      title: 'Serendale — Scalable AI Learning',
-      description:
-        'AI-personalized learning platform: courses, mentorship, progress tracking, measurable outcomes.',
+      title: 'Serendale — Landing',
+      description: 'Demo landing page.',
     },
     nav: {
-      courses: 'Courses',
+      courses: 'Smart Contracts',
       services: 'Services',
       solutions: 'Solutions',
       roadmap: 'Roadmap',
-      whitepaper: 'Methodology',
+      whitepaper: 'Whitepaper',
       advantages: 'Advantages',
       testimonials: 'Testimonials',
     },
     hero: {
-      kicker: 'THE BEST LEARNING PLATFORM',
-      titleTop: 'Serendale.',
+      titleTop: 'THE BEST WEBSITE EVER',
       titleBottom: 'Scalable.',
-      text: 'AI adapts the learning path to your goal and pace. Clear progress metrics, fast onboarding, consistent content structure.',
+      text: 'Our technology performing fast blockchain (120K TPS) and it has guaranteed AI-based data security. Proof of Stake, its consensus algorithm enables unlimited speeds.',
       ctaPrimary: 'Get started',
-      ctaSecondary: 'Explore courses',
+      ctaSecondary: 'Read more',
     },
     metrics: {
       learners: 'Learners',
@@ -94,7 +89,7 @@ export const MESSAGES = {
       avgTime: 'Time/day',
     },
     sections: {
-      coursesTitle: 'Courses that drive outcomes',
+      coursesTitle: 'Courses, that drive outcomes',
       coursesText: 'Short modules, practice, quizzes, and capstone projects.',
       servicesTitle: 'Services for growth',
       servicesText: 'Mentors, tracking, recommendations, collaboration.',
@@ -112,7 +107,7 @@ export const MESSAGES = {
     },
     testimonials: {
       title: 'Testimonials',
-      text: 'Neutral demo reviews (education), 6 cards.',
+      text: 'Neutral demo reviews, 6 cards.',
       schemaName: 'Serendale',
     },
     footer: {

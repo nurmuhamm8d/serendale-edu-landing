@@ -48,7 +48,7 @@ export default async function LocaleLayout({ children, params }) {
   const messages = getMessages(locale)
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
+    <I18nProvider key={locale} locale={locale} messages={messages}>
       <a
         href="#content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:text-black"

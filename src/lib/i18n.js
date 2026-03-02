@@ -1,5 +1,4 @@
 import { MESSAGES } from '@/data/messages'
-import { SITE } from '@/lib/site'
 
 function getByPath(obj, path) {
   const parts = path.split('.')
@@ -12,12 +11,11 @@ function getByPath(obj, path) {
 }
 
 export function getMessages(locale) {
-  if (MESSAGES[locale]) return MESSAGES[locale]
-  return MESSAGES[SITE.defaultLocale]
+  return MESSAGES[locale] || MESSAGES.en
 }
 
 export function t(locale, key) {
-  const dict = getMessages(locale)
-  const val = getByPath(dict, key)
+  const messages = getMessages(locale)
+  const val = getByPath(messages, key)
   return typeof val === 'string' ? val : key
 }
