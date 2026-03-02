@@ -15,7 +15,7 @@ export default function OpenGraphImage() {
           flexDirection: 'column',
           justifyContent: 'center',
           padding: '64px',
-          background: 'radial-gradient(900px 450px at 50% 15%, rgba(168,85,247,0.35), transparent 60%), radial-gradient(700px 380px at 20% 50%, rgba(236,72,153,0.28), transparent 60%), radial-gradient(700px 380px at 80% 55%, rgba(59,130,246,0.22), transparent 60%), #000',
+          background: 'radial-gradient(900px 450px at 50% 15%, rgba(168,85,247,0.35), transparent 60%), radial-gradient(700px 380px at 20% 50%, rgba(236,72,153,0.28), transparent 60%), radial-gradient(700px 380px at 80% 55%, rgba(59,130,246,0.22), transparent 60%)',
           color: 'white',
         }}
       >
@@ -79,5 +79,3 @@ export default function OpenGraphImage() {
     size
   )
 }
-// добавьте где-нибудь комментарий, например:
-// force redeploy - fixed background
