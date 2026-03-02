@@ -79,3 +79,5 @@ export default function OpenGraphImage() {
     size
   )
 }
+// добавьте где-нибудь комментарий, например:
+// force redeploy - fixed background
